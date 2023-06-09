@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+
+<h1>Guessing Game</h1>
+
+<script>
+	
+	function pulaLinha() {
+		
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		
+		document.write(texto);
+		pulaLinha();
+	}
+
+	//Função usada para randomizar um número de 0 a 10, com o Math.round para arredondar.
+	function sorteia() {
+		
+		var n = Math.round(Math.random() * 10);
+		return n;
+	}
+
+	var numeroPensado = sorteia();
+	console.log(numeroPensado);
+	var chute = parseInt(prompt("Digite seu chute: "));
+
+	//Condicional/decisão para dizer se o jogador acertou o chute ou não.
+	if (chute == numeroPensado) {
+
+		mostra("Você acertou! Parabéns!");
+
+	}
+
+	else {
+
+		mostra("Que pena, Você errou o chute :(");
+	}
+
+	//Condicional para informar ao jogador se o número escolhido por ele é maior ou menor que o valor sorteado.
+	if (chute < numeroPensado) {
+
+		mostra("O número que Você escolheu é menor que o sorteado");
+	}
+
+	if (chute > numeroPensado) {
+
+		mostra("O número que Você escolheu é maior que o sorteado");
+	}
+
+
+</script>

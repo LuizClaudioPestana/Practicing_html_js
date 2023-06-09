@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+
+<h1>Calculando IMC</h1>
+
+<script>
+
+	function pulaLinha() {
+		
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		
+		document.write(texto);
+		pulaLinha();
+	}
+
+	// Sem a função CalculaIMC criada:
+
+	var meuPeso = 75;
+	var minhaAltura = 1.72;
+	var meuImc = meuPeso / (minhaAltura * minhaAltura);
+
+	mostra("O valor do meu IMC é " + meuImc + ".");
+	mostra("****************************************************");
+	mostra("O valor arredondado utilizando a função " + "Math.round() ".bold() + "é " + Math.round(meuImc) + ".");
+	mostra("****************************************************");
+
+	// Criando Função CalculaIMC:
+
+	function calculaImc(peso, altura) {
+		
+		var imc = peso / (altura * altura);
+		mostra("O calculo do IMC é " + imc);
+	}
+
+	calculaImc(75 , 1.72);
+
+	mostra("****************************************************");
+
+	calculaImc(89 , 1.58);
+
+	mostra("****************************************************");
+
+	// Nova Função para o IMC utilizando RETURN:
+
+	function calcularIMC(peso, altura) {
+
+		var imc = peso / (altura * altura);
+		return imc;
+	}
+
+	var meuImc = calcularIMC(63, 1.65);
+	mostra("Utilizando " + "RETURN".bold() + " para retornar o valor do IMC, usando uma variável para receber o valor da função");
+	mostra("imc = " + meuImc);
+
+	var meuImc = calcularIMC(75, 1.72);
+	var imcAmigo = calcularIMC(82, 1.79);
+	var imcTotal = meuImc + imcAmigo;
+
+	mostra("A soma do meu IMC e do meu amigo é " + imcTotal);
+
+	mostra("****************************************************");
+	
+
+</script>

@@ -1,0 +1,120 @@
+<meta charset="utf-8">
+
+<h1>TESTES COM VARIÁVEIS, CÁLCULOS E FUNÇÕES</h1>
+
+<script>
+
+	var ano = 2023;
+
+	document.write("Flávio tem " + (ano - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem " + (ano - 1996) + " anos");
+	document.write("<br>");
+	document.write("Barney tem " + (ano - 1976) + " anos");
+	document.write("<br>");
+	document.write("======================================");
+	document.write("<br>");
+	document.write(ano);
+	document.write("<br>");
+	document.write("======================================");
+	document.write("<br>");
+
+	//Atribuindo novo valor a variável
+
+	ano = 2020;
+
+	document.write("João tem " + (ano - 1999) + " anos");
+	document.write("<br>");
+	document.write("======================================");
+	document.write("<br>");
+
+	//Atribuindo média de anos numa variável
+
+	var media = (46 + 27 + 47)/3;
+
+	document.write("A média das idades é " + media + " anos");
+	document.write("<br>");
+	document.write("======================================");
+	document.write("<br>");
+
+	//Utilizando valores que o resultado necessita ser ARREDONDADO
+
+	var idadeFlavio = 46;
+	var idadeJoaquim = 23;
+	var idadeBarney = 47;
+	var media2 = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+	document.write("Valor de média que será arredondado utilizando Math.round():".bold());
+	document.write("<br>");
+	document.write("A média das idades é: " + Math.round(media2) + " anos");
+	document.write("<br>");
+	document.write("======================================","<br>");
+
+	var nome = "Flávio";
+	
+	document.write("A idade de " + nome + " é " + idadeFlavio);
+	document.write("<br>");
+	document.write("======================================","<br>");
+
+	//Criando variável para pular linha
+
+	var pularLinha = "<br><br><br><br>";
+	document.write("Vou pular 4 linhas");
+	document.write(pularLinha);
+	document.write("Pulei!!!".bold());
+	document.write(pularLinha);
+	document.write("======================================","<br>");
+
+	//Criando uma FUNÇÃO para pular linha
+
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	document.write("A seguir vamos criar uma função " + "PULAR LINHA(pulaLinha)".bold() + ", visto que anteriormente estava declarada como variável");
+
+	pulaLinha();
+
+	document.write("aloooooo == funcionou");
+
+	pulaLinha();
+
+	document.write("======================================");
+
+	pulaLinha();
+
+	function mostra(texto) {
+		
+		document.write(texto);
+		pulaLinha();
+	}
+
+	mostra("Olá, Mundoooo!!!");
+	mostra("Hello, World!!!");
+
+	pulaLinha();
+
+
+    function exibeTitulo(titulo) {
+        document.write("<h1><big>" + titulo + "</h1></big>");
+        pulaLinha();
+    }
+
+    function exibeParagrafo(paragrafo) {
+        document.write("<p><big>" + paragrafo + "</p></big>");
+        pulaLinha();
+    }
+
+    // pede para alguém ler daqui em diante e veja se ele entende o que esta sendo feito
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var subtracao = (idade2 - idade1);
+
+    mostra("a diferença de idade é " + subtracao);
+
+
+</script>
